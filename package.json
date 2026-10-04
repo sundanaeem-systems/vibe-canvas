@@ -19,7 +19,7 @@
     "canvas-confetti": "^1.9.3",
     "framer-motion": "^11.5.4",
     "lucide-react": "^0.441.0",
-    "next": "15.0.0",
+    "next": "^15.5.27",
     "next-sanity": "^9.5.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
