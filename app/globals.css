@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vibe-primary: #00f0ff;
+  --vibe-accent: #ff007f;
+  --vibe-bg: #12131f;
+  --vibe-bg-2: #08090f;
+  --vibe-surface: rgba(40, 44, 68, 0.5);
+  --vibe-ink: #f4f6ff;
+  --vibe-ink-soft: #a9b0c8;
+  --vibe-line: rgba(255, 255, 255, 0.15);
+}
+
+[data-vibe='vaporwave'] {
+  --vibe-bg: #2e1438;
+  --vibe-bg-2: #1b0d2a;
+  --vibe-surface: rgba(93, 45, 110, 0.42);
+  --vibe-ink: #fdeafd;
+  --vibe-ink-soft: #d6b3e3;
+  --vibe-line: rgba(255, 255, 255, 0.2);
+}
+
+[data-vibe='zen-minimal'] {
+  --vibe-bg: #f4f3ef;
+  --vibe-bg-2: #e6e5e0;
+  --vibe-surface: rgba(255, 255, 255, 0.72);
+  --vibe-ink: #1d1d1b;
+  --vibe-ink-soft: #6a6a66;
+  --vibe-line: rgba(0, 0, 0, 0.12);
+}
+
+[data-vibe='aurora-glitch'] {
+  --vibe-bg: #0d1f1e;
+  --vibe-bg-2: #06100f;
+  --vibe-surface: rgba(24, 58, 56, 0.45);
+  --vibe-ink: #eafff4;
+  --vibe-ink-soft: #9ec7b8;
+  --vibe-line: rgba(255, 255, 255, 0.16);
+}
+
+body {
+  background-color: var(--vibe-bg);
+  color: var(--vibe-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .vibe-shell {
+    background:
+      radial-gradient(120% 80% at 12% 0%, color-mix(in oklab, var(--vibe-primary) 24%, transparent), transparent 60%),
+      radial-gradient(100% 70% at 92% 8%, color-mix(in oklab, var(--vibe-accent) 22%, transparent), transparent 62%),
+      linear-gradient(170deg, var(--vibe-bg) 0%, var(--vibe-bg-2) 100%);
+    transition: background 700ms ease;
+  }
+
+  .vibe-glass {
+    background: var(--vibe-surface);
+    border: 1px solid var(--vibe-line);
+    backdrop-filter: blur(16px) saturate(140%);
+  }
+
+  .vibe-gradient-text {
+    background-image: linear-gradient(100deg, var(--vibe-primary), var(--vibe-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .vibe-node-glow {
+    box-shadow:
+      0 0 0 1px var(--vibe-line),
+      0 18px 60px -22px color-mix(in oklab, var(--vibe-primary) 70%, transparent);
+  }
+
+  .vibe-grid-lines {
+    background-image:
+      linear-gradient(to right, var(--vibe-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--vibe-line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(85% 70% at 50% 40%, #000 30%, transparent 100%);
+  }
+}

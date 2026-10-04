@@ -1,0 +1,39 @@
+{
+  "name": "vibe-canvas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/presentation": "^1.19.0",
+    "@sanity/preview-url-secret": "^2.0.0",
+    "@sanity/ui": "^2.8.9",
+    "@sanity/vision": "^3.57.0",
+    "@sanity/visual-editing": "^2.1.10",
+    "canvas-confetti": "^1.9.3",
+    "framer-motion": "^11.5.4",
+    "lucide-react": "^0.441.0",
+    "next": "15.0.0",
+    "next-sanity": "^9.5.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "sanity": "^3.57.0",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.6.4",
+    "@types/node": "^22.5.5",
+    "@types/react": "^18.3.7",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.6.2"
+  }
+}
